@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .header{
+        display: flex;
+        justify-content: space-between;
+        padding-left: 6%;
+        padding-top: 1%;
+        padding-right: 6%;
+
+     }
+
+     .logo{
+        display: flex;
+        justify-items: left;
+        font-family: Bahnschrift;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 27px;
+        color: rgba(0,0,0,1);
+        letter-spacing: 0.5604845428466797px;
+        padding-left: 10%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        padding-right: 6%;
+
+     }
+    
+    .feature{
+        display: flex;
+        justify-content: space-between;
+        padding-left: 6%;
+        padding-top: 2%;
+        padding-right: 6%;
+
+    }
+    
+    .feature-story{
+        display: flex;
+        flex-direction: column;
+        margin:  60; 
+    }
+
+    .section-feature{
+        padding-left: 10%;
+        padding-top: 6%;
+    }
+
+    #header-line {
+        fill: transparent;
+        stroke: rgba(112,112,112,1);
+        stroke-width: 1.5px;
+        stroke-linejoin: miter;
+        stroke-linecap: butt;
+        stroke-miterlimit: 4;
+        shape-rendering: auto;
+
+    }
+    .header-line {
+        overflow: visible;
+        position: absolute;
+        width: 90%;
+        height: 2px;
+        left: 2.5%;
+        transform: matrix(1,0,0,1,0,0);
+
+    }
+
+    h1 {
+        text-align: left;
+        font-family: ITC Souvenir;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 45px;
+        color: rgba(0,0,0,1);
+        letter-spacing: 0.8px;
+
+    }
+
+    h4 {
+       
+        text-align: left;
+        font-family: Bahnschrift;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 15px;
+        color: rgba(0,0,0,1);
+    }
+
+    p {
+        text-align: left;
+        font-family: Bahnschrift;
+        font-style: normal;
+        /* font-weight: bold; */
+        font-size: 15px;
+        color: rgba(0,0,0,1);
+    }
+
+    .push {
+    margin-left: auto;
+    }
+
+    .what-we-do-section{
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+    }
+
+    .pillar-section{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #WHAT_WE_DO {
+        text-align: center;
+        padding-top: 3%;
+        padding-bottom: 2%;
+        font-family: ITC Souvenir;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        color: rgba(0,0,0,1);
+        letter-spacing: 1.1952095794677735px;
+    }
+
+    
+    #what_we_do_text {
+        text-align: center;
+        padding-left: 10%;
+        padding-right: 10%;
+        font-family: Bahnschrift;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        color: rgba(0,0,0,1);
+        line-height: 170%;
+    }
+
+        
+    #Primary_Button {
+        position: absolute;
+        width: 152px;
+        height: 41px;
+
+        overflow: visible;
+    }
+    #base {
+        fill: rgba(255,62,57,1);
+    }
+    .base {
+        position: absolute;
+        overflow: visible;
+
+    }
+    #DONATE_TODAY {
+        overflow: visible;
+        position: absolute;
+        text-align: center;
+        font-family: Bahnschrift;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        color: rgba(248,232,217,1);
+    }
+
+    .textOverImage{
+            position:relative;
+            width:300px;
+            height:300px;
+            float:left;
+            background-size:100%;
+            background-position:center;
+            overflow:hidden;
+            border-radius:10px;
+        }
+        
+    .textOverImage:before{
+        position:absolute;
+            top:0;
+            bottom:0;
+            left:0;
+            right:0;
+        transform:translateY(80%);
+            background-color:rgb(252, 252, 252);
+            color: black;
+            padding:0 8px;
+            content:attr(data-title);
+            transition:0.5s 0.1s;
+            text-align: center;
+            font-family: Bahnschrift;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .textOverImage:after{
+            position:absolute;
+            color:black;
+            content:attr(data-text);
+            transition:0.5s;
+            padding: 5em;
+            margin-top:30px;
+            transform:translateY(100%);
+            opacity:0;
+            text-align: center;
+            font-family: Bahnschrift;
+            font-style: normal;
+            font-size: 15px;
+        }
+        
+        .textOverImage:hover:after{
+            transform:translateY(0);
+            transition:0.5s 0.1s;
+            opacity:1;
+        }
+        .textOverImage:hover:before{
+            transform:translateY(15%);
+            padding:8px;
+            background-color:rgb(255, 255, 255);
+            border-radius:10px;
+            transition:0.5s 0.1s;
+        }
+</style>
+
+<body>
+    <div class= header>
+        <!-- <img src="images/Group 13.png" style="width:4%; height:4%;"> -->
+        <span class="logo">YADESTINY TREASURE CHEST</span>
+        <img class="push" src="images/ham.png" height = 40 alt="menu">
+    </div>
+    <svg class="header-line" viewBox="0 0 1122.298 2">
+		<path id="header-line" d="M 0 0 L 1122.298461914063 0">
+		</path>
+	</svg>
+
+    <div class="feature">
+        <div id= "mainPicture">
+            <img src="images/mainPic.png" alt="main" style="width:100%;">
+
+        </div>
+
+        <div class="feature-story">
+            <div class="section-feature">
+                <h4>FEATURE STORY</h4>
+                <h1>Reflecting back on our 10th year!</h1>
+                <p style="line-height: 200%;">For some reason — this country, this city, this neighborhood, this particular street —  is the place you are living a majority of your life in.</p>
+                <!-- <div id="Primary_Button">
+                    <svg class="base">
+                        <rect id="base" rx="6" ry="6" x="0" y="0" width="152" height="41">
+                        </rect>
+                    </svg>
+                    <div id="DONATE_TODAY">
+                        <span>DONATE TODAY!</span>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    
+
+    <div class="what-we-do-section">
+        <div id="WHAT_WE_DO">
+            <span>WHAT WE DO</span>
+        </div>
+        <div id="what_we_do_text">
+            <span>Yadestiny Treasure Chest is a 501c(3) operated non- profit organization that is formed as an exemplary Organization that contributes to the betterment of neighboring communities, and low-income families, also extended to those countries that have been devastated by natural disasters.</span>
+        </div>
+
+    </div>
+    <div class="pillar-section">
+    <p
+        class="textOverImage" 
+        style="background-image:url(images/community.png)" 
+        data-title="COMMUNITY" data-text="We pride ourselves on the building of our community of passionate, selfless, giving and fashion forward youth and volunteers">
+    </p>
+
+    <p  
+        class="textOverImage" 
+        style="background-image:url(images/opportunity.png)" 
+        data-title="OPPORTUNITY" data-text="We provide opportunities through mentorship, internships and referrals to work with partners - a platform to showcase their fashion, thoughts and interests">
+    </p>
+            
+    <p  
+        class="textOverImage" 
+        style="background-image:url(images/education.png)" 
+        data-title="EDUCATION" data-text="We provide learning experiences for both family and volunteers, exposing them to knowledge and insight they would normally not have access to.">
+    </p>
+
+    <p 
+        class="textOverImage" 
+        style="background-image:url(images/confidence.png)" 
+        data-title="CONFIDENCE" data-text="We help establish a healthy self esteem and confidence through our Fit for Fashion Program. Help to embrace their own sense of style, indirectly combating bullying">
+    </p>
+</body>
+</html>
